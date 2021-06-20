@@ -1,15 +1,15 @@
-# Sensor_Fusion_UKF_Highway 
+# Sensor Fusion UKF Highway 
 <img src="media/ukf_highway_tracked.gif" width="700" height="400" />
 
 This project implements an Unscented Kalman Filter to estimate the state of multiple cars on a highway using noisy lidar and radar measurements. The project requires obtaining RMSE values that are lower than a certain tolerance. 
 
 The main program can be built and ran by doing the following from the project top directory.
 
-1. mkdir build
-2. cd build
-3. cmake ..
-4. make
-5. ./ukf_highway
+1. `mkdir build`
+2. `cd build`
+3. `cmake ..`
+4. `make`
+5. `./ukf_highway`
 
 `main.cpp` is using `highway.h` to create a straight 3 lane highway environment with 3 traffic cars and the main ego car at the center. 
 The viewer scene is centered around the ego car and the coordinate system is relative to the ego car as well. The ego car is green while the other traffic cars are blue. The traffic cars will be accelerating and altering their steering to change lanes. Each of the traffic car's has it's own UKF object generated for it, and will update each indidual one during every time step. 
